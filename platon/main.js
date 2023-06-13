@@ -109,8 +109,8 @@ export function initGL() {
   
     gl.useProgram(ShaderProgram);
 
-    prim1 = createOcta();
-    //prim2 = createCube(); 
+    //prim1 = createOcta();
+    prim1 = createCube(); 
 
     time_loc = gl.getUniformLocation(ShaderProgram, "Time");
     gl.uniform1f(time_loc, myTimer.localTime);
