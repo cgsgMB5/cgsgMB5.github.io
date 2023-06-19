@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <p>
+        <form action='index.html' method='get'>
+            <br /><input id='colorcoefr' type='range' name='slide' min='0' max='1' step='0.01' value='0.5' /> red
+            <br /><input id='colorcoefg' type='range' name='slide' min='0' max='1' step='0.01' value='0.5' /> green
+            <br /><input id='colorcoefb' type='range' name='slide' min='0' max='1' step='0.01' value='0.5' /> blue
+            <br /><input id='camRX' type='range' name='slide' min='0' max='360' step='1' value='180' /> CameraRotateX
+            <br /><input id='camRY' type='range' name='slide' min='0' max='360' step='1' value='180' /> CameraRotateY
+            <br /><input id='camRZ' type='range' name='slide' min='0' max='360' step='1' value='180' /> CameraRotateZ
+            <br /><input id='fileData' type='file' /> Model
+        </form>
+    </p>
+    <canvas height = '500' width = '500' id="glCanvas"></canvas>
+    <script type="module">
+        import {initGL, Render} from "./main.js"
+        initGL();
+        window.setInterval(Render, 10);
+    </script>
+</body>
