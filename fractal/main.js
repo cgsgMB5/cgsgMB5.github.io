@@ -104,7 +104,7 @@ function MouseSecond(event) {//25 : 137
   console.log(xCanvas + " : " + yCanvas);
 
   xDelta += (xCanvas - startX) / 250;
-  yDelta += (yCanvas - startY) / 250;
+  yDelta -= (yCanvas - startY) / 250;
 
   console.log("Offset" + xDelta + "." + yDelta);
 }
